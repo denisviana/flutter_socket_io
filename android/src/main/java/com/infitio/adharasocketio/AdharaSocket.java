@@ -116,7 +116,7 @@ class AdharaSocket implements MethodCallHandler {
                 if(data!=null){
                     array = new Object[data.size()];
                     for(int i=0; i<data.size(); i++){
-                        Object datum = data.get(i);
+                        Object datum = (Object) data.get(i);
                         System.out.println(datum);
                         System.out.println(datum.getClass());
                         array[i] = datum;
