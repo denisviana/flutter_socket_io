@@ -120,7 +120,8 @@ class AdharaSocket implements MethodCallHandler {
                         System.out.println(datum);
                         System.out.println(datum.getClass());
                         System.out.println(JSONObject.class);
-                        array[i] = new JSONObject((Map)datum);
+                        array[i] = datum;
+                        System.out.println(array[i]);
                         /*if(datum instanceof Map){
                             array[i] = new JSONObject((Map)datum);
                         }else if(datum instanceof Collection){
