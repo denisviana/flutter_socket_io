@@ -119,13 +119,14 @@ class AdharaSocket implements MethodCallHandler {
                         Object datum = data.get(i);
                         System.out.println(datum);
                         System.out.println(datum.getClass());
-                        if(datum instanceof Map){
+                        array[i] = datum;
+                        /*if(datum instanceof Map){
                             array[i] = new JSONObject((Map)datum);
                         }else if(datum instanceof Collection){
                             array[i] = new JSONArray((Collection) datum);
                         }else{
                             array[i] = datum;
-                            /*try{
+                            *//*try{
                                 array[i] = new JSONObject(datum.toString());
                             }catch (JSONException jse){
                                 try{
@@ -133,8 +134,8 @@ class AdharaSocket implements MethodCallHandler {
                                 }catch (JSONException jse2){
                                     array[i] = datum;
                                 }
-                            }*/
-                        }
+                            }*//*
+                        }*/
                     }
                 }
                 if (reqId == null) {
